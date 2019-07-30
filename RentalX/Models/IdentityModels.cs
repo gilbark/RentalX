@@ -20,6 +20,10 @@ namespace RentalX.Models
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
+        public DbSet<Car> Cars { get; set; }
+        public DbSet<CarMake> CarMakes { get; set; }
+        public DbSet<CarClass> CarClasses { get; set; }
+
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {

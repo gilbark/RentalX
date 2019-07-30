@@ -173,7 +173,23 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201907301226175_InitialAddModels.cs" />
+    <Compile Include="Migrations\201907301226175_InitialAddModels.Designer.cs">
+      <DependentUpon>201907301226175_InitialAddModels.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201907301229236_SeedingDb.cs" />
+    <Compile Include="Migrations\201907301229236_SeedingDb.Designer.cs">
+      <DependentUpon>201907301229236_SeedingDb.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201907301232292_PopulateCars.cs" />
+    <Compile Include="Migrations\201907301232292_PopulateCars.Designer.cs">
+      <DependentUpon>201907301232292_PopulateCars.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Car.cs" />
+    <Compile Include="Models\CarClass.cs" />
+    <Compile Include="Models\CarMake.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -251,6 +267,17 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201907301226175_InitialAddModels.resx">
+      <DependentUpon>201907301226175_InitialAddModels.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201907301229236_SeedingDb.resx">
+      <DependentUpon>201907301229236_SeedingDb.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201907301232292_PopulateCars.resx">
+      <DependentUpon>201907301232292_PopulateCars.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
