@@ -169,6 +169,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\CarsController.cs" />
+    <Compile Include="Controllers\CustomersController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
@@ -194,16 +195,30 @@
     <Compile Include="Migrations\201907301632143_ChangedCarMileageProp.Designer.cs">
       <DependentUpon>201907301632143_ChangedCarMileageProp.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201907301734014_AddedCustomersTable.cs" />
+    <Compile Include="Migrations\201907301734014_AddedCustomersTable.Designer.cs">
+      <DependentUpon>201907301734014_AddedCustomersTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201907301750160_IdentityModelsChangedMBRevert.cs" />
+    <Compile Include="Migrations\201907301750160_IdentityModelsChangedMBRevert.Designer.cs">
+      <DependentUpon>201907301750160_IdentityModelsChangedMBRevert.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201907301815282_CustomerController.cs" />
+    <Compile Include="Migrations\201907301815282_CustomerController.Designer.cs">
+      <DependentUpon>201907301815282_CustomerController.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Car.cs" />
     <Compile Include="Models\CarClass.cs" />
     <Compile Include="Models\CarMake.cs" />
+    <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="ViewModels\CarFormViewModel.cs" />
+    <Compile Include="ViewModels\RegisterViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />
@@ -265,6 +280,7 @@
     <Content Include="Views\Shared\_NavBar.cshtml" />
     <Content Include="Views\Cars\CarForm.cshtml" />
     <Content Include="Views\Cars\Details.cshtml" />
+    <Content Include="Views\Customers\SignUp.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -297,6 +313,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201907301632143_ChangedCarMileageProp.resx">
       <DependentUpon>201907301632143_ChangedCarMileageProp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201907301734014_AddedCustomersTable.resx">
+      <DependentUpon>201907301734014_AddedCustomersTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201907301750160_IdentityModelsChangedMBRevert.resx">
+      <DependentUpon>201907301750160_IdentityModelsChangedMBRevert.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201907301815282_CustomerController.resx">
+      <DependentUpon>201907301815282_CustomerController.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
