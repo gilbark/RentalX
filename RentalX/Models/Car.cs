@@ -28,7 +28,8 @@ namespace RentalX.Models
         [Display(Name = "Model")]
         public string CarModel { get; set; }
 
-        public long CarMileage { get; set; }
+        [Required]
+        public int CarMileage { get; set; }
 
         [Required]
         public int CostPerDay { get; set; }

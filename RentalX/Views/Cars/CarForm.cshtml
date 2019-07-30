@@ -1,0 +1,43 @@
+﻿@model RentalX.ViewModels.CarFormViewModel
+@{
+    ViewBag.Title = "CarForm";
+}
+
+<h2>@ViewData["PageTitle"]</h2>
+
+@using (Html.BeginForm("Save", "Cars"))
+{
+    <div class="form-group">
+        @Html.LabelFor(c => c.CarModel)
+        @Html.TextBoxFor(c => c.CarModel, new { @class = "form-control" })
+        @Html.ValidationMessageFor(c => c.CarModel)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(c => c.MakeId)
+        @Html.DropDownListFor(c => c.MakeId, new SelectList(Model.Make, "Id", "Name"), "Select Maker", new { @class = "form-control" })
+        @Html.ValidationMessageFor(c => c.MakeId)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(c => c.ClassId)
+        @Html.DropDownListFor(c => c.ClassId, new SelectList(Model.Classes, "Id", "Name"), "Select Class", new { @class = "form-control" })
+        @Html.ValidationMessageFor(c => c.ClassId)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(c => c.CarMileage)
+        @Html.TextBoxFor(c => c.CarMileage, new { @class = "form-control" })
+        @Html.ValidationMessageFor(c => c.CarMileage)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(c => c.CostPerDay)
+        @Html.TextBoxFor(c => c.CostPerDay, new { @class = "form-control" })
+        @Html.ValidationMessageFor(c => c.CostPerDay)
+    </div>
+    @Html.HiddenFor(c => c.Id)
+    <button type="submit" class="btn btn-primary">Save</button>
+}
+
+@section scripts{
+    @Scripts.Render("~/bundles/jqueryval")
+}
+
+

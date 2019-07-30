@@ -6,6 +6,10 @@
 
 <h2>@ViewData["PageTitle"]</h2>
 
+<p>
+    @Html.ActionLink("Create New Car", "New", null, new { @class = "btn btn-primary" })
+</p>
+
 <table id="cars" class="table table-bordered table-hover">
     <thead>
         <tr>
@@ -16,14 +20,16 @@
             <th>Cost/Day</th>
         </tr>
     </thead>
-    @foreach(var car in Model)
-    {
-        <tr>
-            <td>@car.CarModel</td>
-            <td>@car.Make.Name</td>
-            <td>@car.CarClass.Name</td>
-            <td>@car.CarMileage</td>
-            <td>@car.CostPerDay</td>
-        </tr>
-    }
+    <tbody>
+        @foreach (var car in Model)
+        {
+            <tr>
+                <td>@Html.ActionLink(car.CarModel, "Edit", "Cars", new { id = car.Id }, null)</td>
+                <td>@car.Make.Name</td>
+                <td>@car.CarClass.Name</td>
+                <td>@car.CarMileage.ToString("##,###")</td>
+                <td>$ @car.CostPerDay</td>
+            </tr>
+        }
+    </tbody>
 </table>
