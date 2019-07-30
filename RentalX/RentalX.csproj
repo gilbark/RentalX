@@ -168,22 +168,23 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CarsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201907301226175_InitialAddModels.cs" />
-    <Compile Include="Migrations\201907301226175_InitialAddModels.Designer.cs">
-      <DependentUpon>201907301226175_InitialAddModels.cs</DependentUpon>
+    <Compile Include="Migrations\201907301506278_AddDB.cs" />
+    <Compile Include="Migrations\201907301506278_AddDB.Designer.cs">
+      <DependentUpon>201907301506278_AddDB.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201907301229236_SeedingDb.cs" />
-    <Compile Include="Migrations\201907301229236_SeedingDb.Designer.cs">
-      <DependentUpon>201907301229236_SeedingDb.cs</DependentUpon>
+    <Compile Include="Migrations\201907301507428_seedingdata.cs" />
+    <Compile Include="Migrations\201907301507428_seedingdata.Designer.cs">
+      <DependentUpon>201907301507428_seedingdata.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201907301232292_PopulateCars.cs" />
-    <Compile Include="Migrations\201907301232292_PopulateCars.Designer.cs">
-      <DependentUpon>201907301232292_PopulateCars.cs</DependentUpon>
+    <Compile Include="Migrations\201907301508534_seedcars.cs" />
+    <Compile Include="Migrations\201907301508534_seedcars.Designer.cs">
+      <DependentUpon>201907301508534_seedcars.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -251,6 +252,8 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Cars\Index.cshtml" />
+    <Content Include="Views\Shared\_NavBar.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -269,14 +272,14 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201907301226175_InitialAddModels.resx">
-      <DependentUpon>201907301226175_InitialAddModels.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201907301506278_AddDB.resx">
+      <DependentUpon>201907301506278_AddDB.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201907301229236_SeedingDb.resx">
-      <DependentUpon>201907301229236_SeedingDb.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201907301507428_seedingdata.resx">
+      <DependentUpon>201907301507428_seedingdata.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201907301232292_PopulateCars.resx">
-      <DependentUpon>201907301232292_PopulateCars.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201907301508534_seedcars.resx">
+      <DependentUpon>201907301508534_seedcars.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

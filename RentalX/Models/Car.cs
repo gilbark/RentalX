@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
@@ -10,15 +11,15 @@ namespace RentalX.Models
     {
         public int Id { get; set; }
 
-
-        [Required]
+        [ForeignKey("CarClass")]
+        [Display(Name = "Class")]
         public int ClassId { get; set; }
 
-        [Display(Name = "Class")]
+
         public CarClass CarClass { get; set; }
 
-
-        [Required]
+        [ForeignKey("Make")]
+        [Display(Name = "Make")]
         public int MakeId { get; set; }
 
         public CarMake Make { get; set; }
@@ -27,7 +28,6 @@ namespace RentalX.Models
         [Display(Name = "Model")]
         public string CarModel { get; set; }
 
-        [Required]
         public long CarMileage { get; set; }
 
         [Required]

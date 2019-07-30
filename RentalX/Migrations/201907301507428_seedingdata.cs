@@ -3,7 +3,7 @@ namespace RentalX.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class SeedingDb : DbMigration
+    public partial class seedingdata : DbMigration
     {
         public override void Up()
         {
@@ -22,11 +22,8 @@ namespace RentalX.Migrations
             Sql("INSERT INTO CarClasses(Id, Name) VALUES (4, 'SUV')");
             Sql("SET IDENTITY_INSERT CarClasses OFF");
 
-           
-
-
         }
-        
+
         public override void Down()
         {
         }

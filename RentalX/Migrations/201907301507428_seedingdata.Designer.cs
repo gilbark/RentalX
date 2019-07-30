@@ -7,13 +7,13 @@ namespace RentalX.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class InitialAddModels : IMigrationMetadata
+    public sealed partial class seedingdata : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(InitialAddModels));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(seedingdata));
         
         string IMigrationMetadata.Id
         {
-            get { return "201907301226175_InitialAddModels"; }
+            get { return "201907301507428_seedingdata"; }
         }
         
         string IMigrationMetadata.Source
